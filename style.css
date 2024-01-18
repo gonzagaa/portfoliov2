@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --nav-height: 7.2rem;
+
+    --primary-color: #006DDD;
+    --secondary-color: #004388;
+    --tertinary-color: #001326;
+}  
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  body {
+    background-image: url(./assets/pexels_videos_2611250\ \(2160p\)\ -\ frame\ at\ 0m3s.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+  }
+  
+  ul {
+    list-style: none;
+  }
+
+  .wrapper {
+    width: min(50rem, 100%);
+    margin-inline: auto;
+  
+    padding-inline: 2.4rem;
+  }
+
+  .wrapper-home {
+    width: min(130rem, 100%);
+    margin-inline: auto;
+  
+    padding-inline: 2.4rem;
+  }
+  
+  section {
+    padding-block: 10rem;
+  }
+
+  /*====  scrollbar ============================ */
+  
+  ::-webkit-scrollbar {
+    width: 1rem;
+    background-color: #111111;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    width: 1rem;
+    background-color: #333333;
+  }
+
+/* HOME =================== */
+#home .banner video {
+  display: none;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+
+    filter: brightness(.8);
+  }
+
+  .banner .content {
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #home .content .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #home .content .text .paragraphy {
+    display: flex;
+    align-items: center;
+  }
+
+  #home .social-links.mobile {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  #home .social-links.mobile svg {
+    filter: drop-shadow(2px 4px 20px #006DDD);
+    animation: move 1.5s infinite ease-in-out;
+  }
+
+  #home .social-links.mobile svg:nth-child(2) {
+    animation-delay: 100ms;
+  }
+
+  #home .social-links.mobile svg:nth-child(3) {
+    animation-delay: 200ms;
+  }
+
+  #home .social-links.desktop {
+    display: none;
+  }
+
+  #home .content .text svg {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #home .content .text .paragraphy p {
+    font-size: 3rem;
+    color: #d8d8d8;
+    font-weight: 400;
+  }
+
+  #home .content .text h1 {
+    font-size: 10rem;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffffe8;
+    text-stroke: 1px #ffffffc5;
+
+    background: #CFCFCF;
+    background: radial-gradient(circle farthest-corner at center center, #cfcfcf17 0%, #0000002d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    line-height: .8;
+    text-align: center;
+  }
+
+/* PROJECTS =================== */
+  #projects {
+    background: rgba(0, 0, 0, 0.767);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.082);
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+
+  #projects header h2 {
+    color: var(--primary-color);
+    font-size: 3.5rem;
+  }
+
+  #projects header p {
+    font-size: 1.6rem;
+    color: #d8d8d8;
+    font-weight: 500;
+  }
+
+  #projects header {
+    margin-bottom: 8rem;
+  }
+
+  #projects .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+  }
+
+  #projects .image img {
+    width: 100%;
+
+    animation: move 1.5s infinite ease-in-out;
+  }
+
+  #projects h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #d8d8d8;
+  }
+
+  #projects p {
+    color: #d8d8d8;
+    font-size: 1.6rem;
+  }
+
+/* buttonWhatsapp =================== */
+
+#competencias .cards .card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: #111111a2;
+  backdrop-filter: blur(4px);
+  border-radius: 2rem;
+  -webkit-backdrop-filter: blur(4px);
+  border: .6px solid #4b4b4b;
+  min-height: 30rem;
+
+  box-shadow:  5px 5px 20px #242424,
+             -5px -5px 20px #ededed10;
+}
+
+#competencias .cards .card ion-icon {
+  font-size: 6rem;
+  color: var(--primary-color);
+}
+
+#competencias .cards .card:nth-child(1) ion-icon,
+#competencias .cards .card:nth-child(1) span {
+  color: #f0db4f;
+}
+
+#competencias .cards .card:nth-child(2) ion-icon,
+#competencias .cards .card:nth-child(2) span {
+  color: #ec6231;
+}
+
+#competencias .cards .card:nth-child(3) ion-icon,
+#competencias .cards .card:nth-child(3) span {
+  color: #264de4;
+}
+
+#competencias .cards .card:nth-child(4) span {
+  color: #3086dd;
+}
+
+#competencias .cards .card:nth-child(5) ion-icon,
+#competencias .cards .card:nth-child(5) span {
+  color: #61dbfb;
+}
+
+#competencias .cards .card span {
+  color: #d8d8d8;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: -1rem;
+}
+
+#competencias .cards .card p {
+  color: #d8d8d8af;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+/* buttonWhatsapp =================== */
+#buttonHome {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: all 300ms ease-in-out;
+}
+
+#buttonHome.show {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+#buttonHome img {
+  width: 6rem;
+  transition: all 300ms ease-in-out;
+}
+
+#buttonHome svg:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 1300px) {
+  .wrapper {
+    width: min(150rem, 100%);
+  }
+
+   header#home {
+      background-image: none;
+      background-repeat: initial;
+      background-size: initial;
+      background-position: initial;
+  }
+
+  header#home .banner .right h1 {
+    font-size: 7rem;
+  }
+
+  header#home .banner video {
+    display: initial;
+  }
+
+  section#projects .wrapper .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20rem;
+    column-gap: 30rem;
+  }
+}
+
+@keyframes move {
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+ 
