@@ -114,28 +114,30 @@ html {
     align-items: center;
   }
 
-  #home .social-links.mobile {
+  #home .social-links {
     margin-top: 3rem;
     display: flex;
     align-items: center;
     gap: 3rem;
   }
 
-  #home .social-links.mobile svg {
+  #home .social-links svg {
     filter: drop-shadow(2px 4px 20px #006DDD);
     animation: move 1.5s infinite ease-in-out;
+    transition: all 200ms ease-in-out;
   }
 
-  #home .social-links.mobile svg:nth-child(2) {
+  #home .social-links a svg:hover {
+    filter: drop-shadow(4px 8px 20px #ffffff);
+    cursor: pointer;
+  }
+
+  #home .social-links a:nth-child(2) svg {
     animation-delay: 100ms;
   }
 
-  #home .social-links.mobile svg:nth-child(3) {
+  #home .social-links a:nth-child(3) svg {
     animation-delay: 200ms;
-  }
-
-  #home .social-links.desktop {
-    display: none;
   }
 
   #home .content .text svg {
@@ -144,13 +146,13 @@ html {
   }
 
   #home .content .text .paragraphy p {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #d8d8d8;
     font-weight: 400;
   }
 
   #home .content .text h1 {
-    font-size: 10rem;
+    font-size: 6rem;
     font-weight: 800;
     color: transparent;
     -webkit-text-stroke: 1px #ffffffe8;
@@ -161,8 +163,18 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    line-height: .8;
+    line-height: 1;
     text-align: center;
+  }
+
+  #home .content .arrow {
+    filter: drop-shadow(2px 4px 15px #006ddd);
+
+    transition: all 200ms ease-in-out;
+  }
+
+  #home .content .arrow:hover {
+    transform: scale(1.1);
   }
 
 /* PROJECTS =================== */
@@ -199,8 +211,15 @@ html {
 
   #projects .image img {
     width: 100%;
-
+    transition: all 200ms ease-in-out;
     animation: move 1.5s infinite ease-in-out;
+
+    filter: drop-shadow(2px 4px 20px #1b1b1b);
+  }
+  
+  #projects .image img:hover { 
+    cursor: pointer;
+    filter: drop-shadow(1px 3px 15px #464646);
   }
 
   #projects h3 {
@@ -214,7 +233,32 @@ html {
     font-size: 1.6rem;
   }
 
-/* buttonWhatsapp =================== */
+  #projects .technologies {
+    margin-top: 2rem;
+  }
+
+  #projects .technologies ion-icon {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+
+  #projects .technologies ion-icon:nth-child(1) {
+  color: #f0db4f;
+  border-radius: 1rem;
+}
+
+  #projects .technologies ion-icon:nth-child(2) {
+  color: #ec6231;
+}
+
+  #projects .technologies ion-icon:nth-child(3) {
+  color: #264de4;
+}
+
+/* competencias=================== */
+#competencias {
+  background-color: #d1d1d1;
+}
 
 #competencias .cards .card {
   padding: 2rem;
@@ -223,11 +267,9 @@ html {
   align-items: center;
   gap: 2rem;
 
-  background-color: #111111a2;
-  backdrop-filter: blur(4px);
+  background-color: #1a1a1a;
   border-radius: 2rem;
-  -webkit-backdrop-filter: blur(4px);
-  border: .6px solid #4b4b4b;
+
   min-height: 30rem;
 
   box-shadow:  5px 5px 20px #242424,
@@ -271,9 +313,9 @@ html {
 }
 
 #competencias .cards .card p {
-  color: #d8d8d8af;
+  color: #d1d1d1;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 /* buttonWhatsapp =================== */
 #buttonHome {
@@ -317,8 +359,12 @@ html {
       background-position: initial;
   }
 
-  header#home .banner .right h1 {
-    font-size: 7rem;
+  header#home .wrapper-home .banner .text h1 {
+    font-size: 10rem;
+  }
+
+  header#home .content .text .paragraphy p {
+    font-size: 3rem;
   }
 
   header#home .banner video {
