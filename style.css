@@ -13,6 +13,8 @@
     --primary-color: #006DDD;
     --secondary-color: #004388;
     --tertinary-color: #001326;
+
+    --color-text: #e4e4e4;
 }  
 
 html {
@@ -183,11 +185,10 @@ html {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.082);
     backdrop-filter: blur( 3px );
     -webkit-backdrop-filter: blur( 3px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   #projects header h2 {
-    color: var(--primary-color);
+    color: var(--color-text);
     font-size: 3.5rem;
   }
 
@@ -257,7 +258,7 @@ html {
 
 /* competencias=================== */
 #competencias {
-  background-color: #d1d1d1;
+  background-color: #050505;
 }
 
 #competencias .cards .card {
@@ -267,42 +268,21 @@ html {
   align-items: center;
   gap: 2rem;
 
-  background-color: #1a1a1a;
+  /* From https://css.glass */
+  background: rgba(39, 39, 39, 0.1);
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 2rem;
 
   min-height: 30rem;
 
-  box-shadow:  5px 5px 20px #242424,
-             -5px -5px 20px #ededed10;
+  box-shadow:  5px 5px 20px #000000;
 }
 
 #competencias .cards .card ion-icon {
   font-size: 6rem;
-  color: var(--primary-color);
-}
-
-#competencias .cards .card:nth-child(1) ion-icon,
-#competencias .cards .card:nth-child(1) span {
-  color: #f0db4f;
-}
-
-#competencias .cards .card:nth-child(2) ion-icon,
-#competencias .cards .card:nth-child(2) span {
-  color: #ec6231;
-}
-
-#competencias .cards .card:nth-child(3) ion-icon,
-#competencias .cards .card:nth-child(3) span {
-  color: #264de4;
-}
-
-#competencias .cards .card:nth-child(4) span {
-  color: #3086dd;
-}
-
-#competencias .cards .card:nth-child(5) ion-icon,
-#competencias .cards .card:nth-child(5) span {
-  color: #61dbfb;
+  color: var(--color-text);
 }
 
 #competencias .cards .card span {
@@ -317,6 +297,105 @@ html {
   font-size: 1.6rem;
   font-weight: 300;
 }
+
+/* sobre =================== */
+#sobre {
+  background-color: #050505;
+}
+
+#sobre .image {
+  margin-bottom: 3rem;
+}
+
+#sobre .image img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+
+  border-radius: 50%;
+  box-shadow:  19px 19px 30px #181818,
+  -19px -19px 30px #202020;
+
+  animation: move 3s ease-in-out infinite;
+}
+
+#sobre .content header h2 {
+  font-size: 4rem;
+  color: var(--color-text);
+}
+
+#sobre .content .text {
+  text-align: left;
+}
+
+#sobre .content .text p {
+  font-weight: 300;
+  color: var(--color-text);
+  font-size: 1.6rem;
+}
+
+#sobre .content .text p span {
+  font-weight: 600;
+}
+
+#sobre .content .text ul {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  align-items: start;
+  text-align: left;
+}
+
+#sobre .content .text ul li {
+  font-size: 1.4rem;
+  color: var(--color-text);
+  list-style: disc;
+  font-weight: 600;
+}
+
+#sobre .content .text a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+#sobre .content .text a button {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  outline: 1px solid var(--color-text);
+  color: var(--color-text);
+  font-weight: 700;
+  border: none;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 200ms ease-in-out;
+
+}
+
+#sobre .content .text a button:hover {
+  background-color: var(--color-text);
+  color: #111111;
+  box-shadow: 5px 5px 10px #000;
+  cursor: pointer;
+}
+
+#sobre .content .text a button:hover ion-icon {
+  color: #111111;
+  animation: moveicon 2s ease-in-out infinite;
+}
+
+#sobre .content .text a button ion-icon {
+  color: var(--color-text);
+  font-size: 2rem;
+}
+
 /* buttonWhatsapp =================== */
 #buttonHome {
   position: fixed;
@@ -347,6 +426,10 @@ html {
   transform: scale(1.1);
 }
 
+section#competenciasDesktop {
+  display: none;
+}
+
 @media (min-width: 1300px) {
   .wrapper {
     width: min(150rem, 100%);
@@ -371,17 +454,102 @@ html {
     display: initial;
   }
 
+  section#projects .wrapper header h2 {
+    font-size: 5rem;
+  }
+
   section#projects .wrapper .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20rem;
     column-gap: 30rem;
   }
+
+  section#sobre .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  section#sobre .image img {
+    width: 60%;
+  }
+
+  section#sobre .content header h2 {
+    text-align: left;
+  }
+
+  section#sobre .content .text {
+    text-align: left;
+  }
+
+  section#competencias {
+    display: none;
+  }
+
+  section#competenciasDesktop {
+    display: inherit;
+  }
+
+  section#competenciasDesktop header h2 {
+    font-size: 5rem;
+    color: var(--color-text);
+    margin-bottom: 5rem;
+  }
+
+  section#competenciasDesktop .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+
+  section#competenciasDesktop .cards .card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    /* From https://css.glass */
+  background: rgba(61, 61, 61, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.9px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:  6px 6px 30px #141414,
+             -6px -6px 30px #0c0c0c;
+  }
+  
+  section#competenciasDesktop .cards .card ion-icon {
+    font-size: 5rem;
+    color: var(--color-text);
+  }
+
+  section#competenciasDesktop .cards .card span {
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  section#competenciasDesktop .cards .card p {
+    color: var(--color-text);
+    font-size: 1.6rem;
+  }
 }
 
 @keyframes move {
   50% {
     transform: translateY(10px);
+  }
+}
+
+@keyframes moveicon {
+  50% {
+    transform: translateX(5px);
   }
 }
 
