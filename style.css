@@ -220,7 +220,7 @@ html {
   
   #projects .image img:hover { 
     cursor: pointer;
-    filter: drop-shadow(1px 3px 15px #464646);
+    filter: drop-shadow(1px 3px 15px #4646469d);
   }
 
   #projects h3 {
@@ -314,15 +314,16 @@ html {
   width: 100%;
 
   border-radius: 50%;
-  box-shadow:  19px 19px 30px #181818,
-  -19px -19px 30px #202020;
-
+  box-shadow:  19px 19px 30px #1818182d,
+  -19px -19px 30px #2020201f;
+  
   animation: move 3s ease-in-out infinite;
 }
 
 #sobre .content header h2 {
   font-size: 4rem;
   color: var(--color-text);
+  text-align: left;
 }
 
 #sobre .content .text {
@@ -331,7 +332,7 @@ html {
 
 #sobre .content .text p {
   font-weight: 300;
-  color: var(--color-text);
+  color: #6e6e6e;
   font-size: 1.6rem;
 }
 
@@ -341,6 +342,7 @@ html {
 
 #sobre .content .text ul {
   margin-top: 3rem;
+  margin-left: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: .8rem;
@@ -350,9 +352,9 @@ html {
 
 #sobre .content .text ul li {
   font-size: 1.4rem;
-  color: var(--color-text);
+  color: #9b9b9b;
   list-style: disc;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 #sobre .content .text a {
