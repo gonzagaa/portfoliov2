@@ -26,8 +26,7 @@ ScrollReveal().reveal('.social-links .in', { distance: '400px', origin: 'top', d
 ScrollReveal().reveal('.social-links .git', { distance: '400px', origin: 'top', duration: 500, easing: 'ease-in-out', delay: 100});
 ScrollReveal().reveal('.social-links .ig', { distance: '400px', origin: 'top', duration: 500, easing: 'ease-in-out', delay: 200});
 
-ScrollReveal().reveal('#projects .left, header h2, header p, #sobre .image', { distance: '400px', origin: 'left', duration: 500, easing: 'ease-in-out'});
-ScrollReveal().reveal('#projects .right, #sobre .text', { distance: '400px', origin: 'right', duration: 500, easing: 'ease-in-out'});
+ScrollReveal().reveal('#projects .left, header h2, header p, #sobre .image, #projects .right, #sobre .text', { distance: '400px', origin: 'bottom', duration: 500, easing: 'ease-in-out'});
 
 ScrollReveal().reveal('#competenciasDesktop .one', { distance: '400px', origin: 'top', duration: 500, easing: 'ease-in-out', mobile: false, delay: 50});
 ScrollReveal().reveal('#competenciasDesktop .two', { distance: '400px', origin: 'top', duration: 500, easing: 'ease-in-out', mobile: false, delay: 150});
