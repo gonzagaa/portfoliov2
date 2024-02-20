@@ -188,14 +188,17 @@ html {
   }
 
   #projects header h2 {
+    line-height: 1.1;
     color: var(--color-text);
     font-size: 3.5rem;
+
+    margin-bottom: 1rem;
   }
 
   #projects header p {
     font-size: 1.6rem;
-    color: #d8d8d8;
-    font-weight: 500;
+    color: #6e6e6e;
+    font-weight: 600;
   }
 
   #projects header {
