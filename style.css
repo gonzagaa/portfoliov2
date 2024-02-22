@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto Mono", monospace;
 }
 
 :root {
@@ -15,6 +15,7 @@
     --tertinary-color: #001326;
 
     --color-text: #e4e4e4;
+    --p-color: #6e6e6e;
 }  
 
 html {
@@ -29,7 +30,7 @@ html {
   }
 
   body {
-    background-image: url(./assets/pexels_videos_2611250\ \(2160p\)\ -\ frame\ at\ 0m3s.jpg);
+    background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -68,6 +69,16 @@ html {
   ::-webkit-scrollbar-thumb {
     width: 1rem;
     background-color: #333333;
+  }
+
+  #particles-js {
+    background-color: transparent;
+    opacity: .7;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    height: 100%;
+    top: 0;
   }
 
 /* HOME =================== */
@@ -154,8 +165,9 @@ html {
   }
 
   #home .content .text h1 {
+    font-family: "Poppins", sans-serif;
     font-size: 6rem;
-    font-weight: 800;
+    font-weight: 900;
     color: transparent;
     -webkit-text-stroke: 1px #ffffffe8;
     text-stroke: 1px #ffffffc5;
@@ -196,8 +208,9 @@ html {
   }
 
   #projects header p {
+    font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
-    color: #6e6e6e;
+    color: var(--p-color);
     font-weight: 600;
   }
 
@@ -228,12 +241,15 @@ html {
 
   #projects h3 {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #d8d8d8;
+
+    margin-bottom: .5rem;
   }
 
   #projects p {
-    color: #d8d8d8;
+    font-family: "Poppins", sans-serif;
+    color: var(--p-color);
     font-size: 1.6rem;
   }
 
@@ -296,7 +312,8 @@ html {
 }
 
 #competencias .cards .card p {
-  color: #d1d1d1;
+  font-family: "Poppins", sans-serif;
+  color: var(--p-color);
   font-size: 1.6rem;
   font-weight: 300;
 }
@@ -337,6 +354,7 @@ html {
   font-weight: 300;
   color: #6e6e6e;
   font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 #sobre .content .text p span {
@@ -358,6 +376,8 @@ html {
   color: #9b9b9b;
   list-style: disc;
   font-weight: 400;
+
+  font-family: 'Poppins', sans-serif;
 }
 
 #sobre .content .text a {
@@ -366,6 +386,8 @@ html {
 }
 
 #sobre .content .text a button {
+  font-family: 'Poppins', sans-serif;
+
   margin-top: 2rem;
   border-radius: 1rem;
   padding: 1rem 2rem;
@@ -456,6 +478,7 @@ section#competenciasDesktop {
   }
 
   header#home .banner video {
+    filter: brightness(.5);
     display: initial;
   }
 
@@ -468,6 +491,11 @@ section#competenciasDesktop {
     grid-template-columns: 1fr 1fr;
     gap: 20rem;
     column-gap: 30rem;
+  }
+
+  section#sobre {
+    position: absolute;
+    background-color: #000;
   }
 
   section#sobre .wrapper {
@@ -541,7 +569,8 @@ section#competenciasDesktop {
   }
 
   section#competenciasDesktop .cards .card p {
-    color: var(--color-text);
+    font-family: "Poppins", sans-serif;
+    color: #6e6e6e;
     font-size: 1.6rem;
   }
 }
