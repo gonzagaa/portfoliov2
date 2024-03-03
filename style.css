@@ -223,7 +223,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8rem;
+    gap: 10rem;
   }
 
   #projects .image img {
@@ -232,6 +232,8 @@ html {
     animation: move 1.5s infinite ease-in-out;
 
     filter: drop-shadow(2px 4px 20px #1b1b1b);
+
+    margin-bottom: 4rem;
   }
   
   #projects .image img:hover { 
