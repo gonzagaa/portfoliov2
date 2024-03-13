@@ -82,6 +82,10 @@ html {
   }
 
 /* HOME =================== */
+#home {
+  overflow: hidden;
+}
+
 #home .banner video {
   display: none;
 }
@@ -193,6 +197,7 @@ html {
 
 /* PROJECTS =================== */
   #projects {
+    overflow: hidden;
     background: rgba(0, 0, 0, 0.519);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.082);
     backdrop-filter: blur( 3px );
