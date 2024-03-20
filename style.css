@@ -287,6 +287,12 @@ html {
   background-color: #050505;
 }
 
+#competencias header h2 {
+  font-size: 3.5rem;
+    color: var(--color-text);
+    margin-bottom: 5rem;
+}
+
 #competencias .cards .card {
   padding: 2rem;
   display: flex;
