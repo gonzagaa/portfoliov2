@@ -202,6 +202,41 @@ html {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.082);
     backdrop-filter: blur( 3px );
     -webkit-backdrop-filter: blur( 3px );
+    position: relative;
+  }
+
+  #projects img.looper {
+    position: absolute;
+    
+
+    animation: rotate infinite linear 20s;
+    z-index: -1;
+    filter: brightness(.2);
+  }
+
+  #projects img.looper.um {
+    bottom: 91%;
+    right: -24rem;
+  }
+
+  #projects img.looper.dois {
+    bottom: 45%;
+    left: -24rem;
+  }
+
+  #projects img.looper.tres {
+    bottom: 10%;
+    right: -24rem;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   #projects header h2 {
