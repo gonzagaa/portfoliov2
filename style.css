@@ -136,11 +136,14 @@ html {
     display: flex;
     align-items: center;
     gap: 3rem;
+
+    position: sticky;
+    top: 100px;
   }
 
   #home .social-links svg {
     filter: drop-shadow(2px 4px 20px #006DDD);
-    animation: move 1.5s infinite ease-in-out;
+    animation: move 2.5s infinite ease-in-out;
     transition: all 200ms ease-in-out;
   }
 
@@ -150,11 +153,11 @@ html {
   }
 
   #home .social-links a:nth-child(2) svg {
-    animation-delay: 100ms;
+    animation-delay: 200ms;
   }
 
   #home .social-links a:nth-child(3) svg {
-    animation-delay: 200ms;
+    animation-delay: 400ms;
   }
 
   #home .content .text svg {
@@ -205,13 +208,23 @@ html {
     position: relative;
   }
 
+  #projects img.textoPortfolio {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+    opacity: .02;
+  }
+
   #projects img.looper {
     position: absolute;
     
 
     animation: rotate infinite linear 20s;
     z-index: -1;
-    filter: brightness(.2);
+    filter: brightness(.1);
   }
 
   #projects img.looper.um {
@@ -269,11 +282,15 @@ html {
   #projects .image img {
     width: 100%;
     transition: all 200ms ease-in-out;
-    animation: move 1.5s infinite ease-in-out;
+    animation: move 2.5s infinite ease-in-out;
 
     filter: drop-shadow(2px 4px 20px #1b1b1b);
 
     margin-bottom: 4rem;
+  }
+
+  #projects .card.right .image img {
+    animation-delay: 500ms;
   }
   
   #projects .image img:hover { 
@@ -320,6 +337,7 @@ html {
 /* competencias=================== */
 #competencias {
   background-color: #050505;
+  overflow: hidden;
 }
 
 #competencias header h2 {
@@ -370,6 +388,7 @@ html {
 #sobre {
   position: absolute;
   background-color: #050505;
+  overflow: hidden;
 }
 
 #sobre .image {
@@ -570,6 +589,19 @@ section#competenciasDesktop {
 
   section#competenciasDesktop {
     display: inherit;
+    overflow: hidden;
+
+    position: relative;
+  }
+
+  section#competenciasDesktop img.textoHabilidades {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+    opacity: .02;
   }
 
   section#competenciasDesktop header h2 {
