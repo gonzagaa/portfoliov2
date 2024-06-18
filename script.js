@@ -1,25 +1,4 @@
-window.addEventListener('scroll', onScroll)
 
-onScroll()
-function onScroll() {
-    showButtonHomeOnScroll()
-}
-
-function showButtonHomeOnScroll() {
-    if(scrollY > 200) {
-        document.querySelector("#buttonHome").classList.add("show")
-    } else {
-        document.querySelector("#buttonHome").classList.remove("show")
-    }
-}
-
-function openMenu() {
-    document.body.classList.add('menu-expanded')
-}
-
-function closeMenu() {
-    document.body.classList.remove('menu-expanded')
-}
 
 var swiper = new Swiper(".mySwiper", {
     grabCursor: true,
@@ -35,3 +14,19 @@ var swiper = new Swiper(".mySwiper", {
         },
       },
   });
+
+const hamburger = document.querySelector(".hamburger")
+const navContent = document.querySelector(".nav-content")
+const body = document.body;
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active")
+  navContent.classList.toggle("active")
+  body.classList.toggle("no-scroll");
+})
+
+function closeMenu() {
+  hamburger.classList.remove("active")
+  navContent.classList.remove("active")
+  body.classList.remove("no-scroll");
+}

@@ -525,7 +525,7 @@ section#competenciasDesktop {
   display: none;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1080px) {
   .wrapper {
     width: min(150rem, 100%);
   }
