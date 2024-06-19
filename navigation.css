@@ -1,13 +1,49 @@
-.hamburger {
-    cursor: pointer;
-    position: fixed;
-    right: 5%;
-    top: 3%;
-    z-index: 100;
-}
-
 body.no-scroll {
     overflow: hidden;
+}
+
+.hamburger {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    background-color: transparent;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.hamburger:hover span {
+    box-shadow: 0 0 10px 3px #ffffffa1;
+  }
+
+.hamburger span {
+    position: absolute;
+    right: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: all 1s;
+  }
+
+.hamburger span.um {
+    width: 60px;
+    top: 20px;
+  }
+
+.hamburger span.dois {
+    width: 40px;
+    bottom: 20px;
+  }
+
+.hamburger.active span.um {
+    transform: rotate(45deg);
+    top: 28px;
+  }
+
+.hamburger.active span.dois {
+    transform: rotate(-45deg);
+    width: 60px;
+    bottom: 28px;
   }
 
 .hamburger .bar {
